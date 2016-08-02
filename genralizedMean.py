@@ -1,7 +1,12 @@
 def generalizedMean(x,e):
     if len(e)==1:
         return float(e[0])
-    if x<=0 and 0 in e:
+    for n in e:
+        if n!=n:
+            return float('nan')
+    if x!=x:
+        return float('nan')
+    if x<0 and 0 in e:
         return 0.0
     if x==0:
         return product(e)**(1.0/len(e))
