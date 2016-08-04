@@ -1,3 +1,6 @@
+
+import math
+
 def generalizedMean(x,e):
     '''
     This will return the x'th Generalized Mean of a list of numbers e.
@@ -31,7 +34,7 @@ def generalizedMean(x,e):
     #Analytic continuation for Geometric Mean
     
     if x==0:
-        return product(e)**(1.0/len(e))
+        return math.exp(sum([ math.log(n) for n in e])/float(len(e)))
     
     #Analytic continuation for infinite exponents
     
