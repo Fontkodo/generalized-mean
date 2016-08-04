@@ -33,7 +33,7 @@ def generalizedMean(x,e):
     
     #Analytic continuation for Geometric Mean
     
-    if x==0:
+    if abs(x) < 0.00001:
         return math.exp(sum([ math.log(n) for n in e])/float(len(e)))
     
     #Analytic continuation for infinite exponents
