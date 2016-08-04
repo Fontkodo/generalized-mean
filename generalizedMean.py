@@ -62,66 +62,65 @@ def GMtest():
     This function is used to verify that the generalizedMean function works. Returns nothing.
     '''
     
-    print 'Now testing the Generalized Mean...'
-    print
+    print ('Now testing the Generalized Mean...\n')
     
     errorCount=0
     
-    print 'Testing standard case...'
+    print ('Testing standard case...')
     if generalizedMean(1,[1,2,3])==2.0:
-        print 'OK'
+        print('OK')
     else:
-        print 'Standard case failed!'
+        print ('Standard case failed!')
         errorCount+=1
     
-    print 'Testing Geometric Mean...'
+    print ('Testing Geometric Mean...')
     if generalizedMean(0,[2,8])==4.0:
-        print 'OK'
+        print ('OK')
     else:
-        print 'Geometric Mean failed!'
+        print ('Geometric Mean failed!')
         errorCount+=1
     
-    print 'Testing infinite exponents...'
+    print ('Testing infinite exponents...')
     if generalizedMean(float('inf'),[1,2,3,4,5])==5.0:
-        print 'Positive OK'
+        print ('Positive OK')
     else:
-        print 'Positive infinity failed!'
+        print ('Positive infinity failed!')
         errorCount+=1
     if generalizedMean(float('-inf'),[1,2,3,4,5])==1.0:
-        print 'Negative OK'
+        print ('Negative OK')
     else:
-        print 'Negative infinity failed!'
+        print ('Negative infinity failed!')
         errorCount+=1
     
-    print 'Testing degenerate case...'
+    print ('Testing degenerate case...')
     if generalizedMean(98,[2])==2.0:
-        print 'OK'
+        print ('OK')
     else:
-        print 'Degenerate case failed!'
+        print ('Degenerate case failed!')
         errorCount+=1
     
-    print 'Testing NaN finder...'
+    print ('Testing NaN finder...')
     if generalizedMean(float('nan'),[9,2])!=generalizedMean(float('nan'),[9,2]):
-        print 'Exponent OK'
+        print ('Exponent OK')
     else:
-        print 'Exponent NaN finder failed!'
+        print ('Exponent NaN finder failed!')
         errorCount+=1
     if generalizedMean(5,[7,float('nan')])!=generalizedMean(5,[7,float('nan')]):
-        print 'Element OK'
+        print ('Element OK')
     else:
-        print 'Element NaN finder failed!'
+        print ('Element NaN finder failed!')
         errorCount+=1
     
-    print
+    print()
     if errorCount!=1:
-        print 'You had {} total errors.'.format(errorCount)
+        print ('You had {} total errors.'.format(errorCount))
     else:
-        print 'You had 1 total error.'
+        print ('You had 1 total error.')
     if errorCount==0:
-        print 'The function is stable.'
+        print ('The function is stable.')
     elif errorCount>0:
-        print 'The function is unstable.'
+        print ('The function is unstable.')
     else:
-        print 'Wait, what?'
-        print 'How did you do that?'
-        print 'You really screwed up this time.'
+        print ('Wait, what?')
+        print ('How did you do that?')
+        print ('You really screwed up this time.')
