@@ -17,10 +17,10 @@
 (define (generalized-mean exponent nums)
   (if (zero? exponent)
       (expt (apply * nums)
-            (/ 1 (length nums)))
+            (/ (length nums)))
       (expt (avg (for/list ((n (in-list nums)))
                    (expt n exponent)))
-            (/ 1 exponent))))
+            (/ exponent))))
 
 (define geometric-mean (curry generalized-mean  0))
 (define harmonic-mean  (curry generalized-mean -1))
