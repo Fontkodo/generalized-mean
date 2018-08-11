@@ -28,7 +28,7 @@ def generalizedMean(x,e):
     
     #Analytic continuation for zero with negative exponents
     
-    if x<=0 and 0 in e:
+    if x<0.00001 and 0 in e:
         return 0.0
     
     #Analytic continuation for Geometric Mean
